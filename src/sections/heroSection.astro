@@ -1,0 +1,72 @@
+---
+//  Astro Components
+import { Image } from "astro:assets";
+
+// Assets
+import heroImage from "../assets/images/placeholder-image.webp";
+
+// Components
+import Button from "../components/ui/button.astro";
+---
+
+<header class="hero">
+  <div class="wrapper hero-wrapper">
+    <div class="hero-content">
+      <h1>Win your day width: Focus, Structure and Balance</h1>
+      <p>
+        Mission Focus helps entrepeneurs take controle over theire time and
+        engery - one day at a time
+      </p>
+      <div class="flex-wrapper" id="btn-wrapper">
+        <div>
+          <Button btnStyle="primary">Start your mission</Button>
+          <span>✅ No credit card required</span>
+        </div>
+        <div>
+          <Button btnStyle="primary-open">See how it works</Button>
+          <span>🕐 Setup in 2 minutes</span>
+        </div>
+      </div>
+    </div>
+    <Image src={heroImage} width={500} height={500} alt="Hero Image" />
+  </div>
+</header>
+
+<style>
+  .hero {
+    background-image: linear-gradient(var(--gradient-hero));
+    color: var(--text-primary);
+    padding-block: var(--space-xl);
+
+    .hero-wrapper {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: center;
+
+      .hero-content {
+        h1 {
+          color: var(--clr-accent-gold);
+          margin-block-end: var(--space-md);
+        }
+
+        p {
+          margin-block-end: var(--space-lg);
+        }
+
+        #btn-wrapper {
+          margin-block-end: var(--space-sm);
+
+          span {
+            display: block;
+            margin-block-start: var(--space-sm);
+          }
+        }
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+</style>
