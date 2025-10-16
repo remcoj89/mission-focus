@@ -1,0 +1,21 @@
+---
+import "../styles/globals.css";
+
+// Components
+import Navbar from "../components/dashboardUi/navbar.astro";
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Mission Focus</title>
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+  </body>
+</html>
