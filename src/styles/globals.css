@@ -1,0 +1,167 @@
+/* =====================================================
+   DEFAULT Variables
+   ===================================================== */
+
+:root {
+  /* ===== ✍️ Typography ===== */
+  --font-heading: "Bellefair", serif;
+  --font-body: "Barlow Condensed", "Inter", sans-serif;
+
+  /* ===== 🔠 Font Sizes ===== */
+  --fs-h1: 3.5rem; /* 56px */
+  --fs-h2: 2.5rem; /* 40px */
+  --fs-h3: 1.75rem; /* 28px */
+  --fs-body: 1rem; /* 16px */
+  --fs-small: 0.875rem; /* 14px */
+
+  /* ===== 📏 Spacing ===== */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* ===== 🧱 Layout ===== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 2px 4px rgba(7, 19, 51, 0.1);
+  --shadow-md: 0 4px 12px rgba(7, 19, 51, 0.15);
+
+    /* ===== 🧠 Transitions ===== */
+  --transition-fast: 150ms ease-in-out;
+  --transition-medium: 300ms ease-in-out;
+}
+
+/* =====================================================
+   🌞 LIGHT THEME (default)
+   ===================================================== */
+:root[data-theme = "light"] {
+  /* ===== 🎯 Brand Colors ===== */
+  --clr-primary-900: #071333; /* Deep navy text / accents */
+  --clr-primary-700: #0d1d4a;
+  --clr-accent-gold: #dbb171;
+  --clr-neutral-100: #f5f5f5;
+  --clr-neutral-50: #ffffff;
+
+
+  /* ===== ⚙️ Component Colors ===== */
+  --bg-body: var(--clr-neutral-100);
+  --bg-surface: var(--clr-neutral-50);
+  --bg-header: var(--clr-primary-900);
+  --text-header: #f5f5f5;
+  --text-primary: var(--clr-primary-900);
+  --text-secondary: rgba(7, 19, 51, 0.75);
+  --text-inverse: var(--clr-neutral-50);
+  --border-color: rgba(7, 19, 51, 0.1);
+
+  /* ===== 🟡 Buttons ===== */
+  --btn-primary-bg: var(--clr-accent-gold);
+  --btn-primary-text: var(--clr-primary-900);
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--clr-accent-gold);
+  --btn-secondary-text: var(--clr-accent-gold);
+  --btn-hover-glow: 0 0 12px rgba(219, 177, 113, 0.5);
+
+  /* ===== 🌈 Gradients ===== */
+  --gradient-hero: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+  --gradient-gold: linear-gradient(90deg, #dbb171 0%, #e5c88f 100%);
+
+  /* ===== ✨ Focus States ===== */
+  --focus-outline: 2px solid var(--clr-accent-gold);
+  --focus-shadow: 0 0 0 3px rgba(219, 177, 113, 0.25);
+
+    /* ===== 🧱 Shadows (added for Light Theme) ===== */
+  --shadow-sm: 0 2px 4px rgba(7, 19, 51, 0.1);
+  --shadow-md: 0 4px 12px rgba(7, 19, 51, 0.15);
+}
+
+/* =====================================================
+   🌙 DARK THEME
+   ===================================================== */
+:root[data-theme = "dark"] {
+  --clr-primary-900: #f5f5f5; /* Light text on dark bg */
+  --clr-primary-700: #e5e5e5;
+  --clr-accent-gold: #dbb171;
+  --clr-neutral-100: #0c1424; /* Deep navy background */
+  --clr-neutral-50: #071333;
+
+  /* ===== ⚙️ Component Colors ===== */
+  --bg-body: var(--clr-neutral-100);
+  --bg-surface: var(--clr-neutral-50);
+  --bg-header: #050a18;
+  --text-header: #f5f5f5;
+  --text-primary: var(--clr-primary-900);
+  --text-secondary: rgba(245, 245, 245, 0.75);
+  --text-inverse: #071333;
+  --border-color: rgba(219, 177, 113, 0.2);
+
+  /* ===== 🟡 Buttons ===== */
+  --btn-primary-bg: var(--clr-accent-gold);
+  --btn-primary-text: #071333;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--clr-accent-gold);
+  --btn-secondary-text: var(--clr-accent-gold);
+  --btn-hover-glow: 0 0 16px rgba(219, 177, 113, 0.7);
+
+  /* ===== 🌈 Gradients ===== */
+  --gradient-hero: linear-gradient(180deg, #071333 0%, #0d1d4a 100%);
+  --gradient-gold: linear-gradient(90deg, #dbb171 0%, #cba65f 100%);
+
+  /* ===== ✨ Focus States ===== */
+  --focus-outline: 2px solid var(--clr-accent-gold);
+  --focus-shadow: 0 0 0 3px rgba(219, 177, 113, 0.35);
+
+  /* ===== 🧱 Shadows (softer, golden tone) ===== */
+  --shadow-sm: 0 2px 4px rgba(219, 177, 113, 0.15);
+  --shadow-md: 0 4px 12px rgba(219, 177, 113, 0.2);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--font-body);
+  background-color: var(--bg-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+
+a {
+  color: inherit;
+}
+
+
+[role="list"] {
+  list-style: none;
+}
+
+
+.wrapper {
+  max-width: 1140px;
+  margin-inline: auto;
+}
