@@ -1,24 +1,23 @@
 ---
+import SectionTitle from "../components/section-title.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Sections
 import HeroSection from "../sections/homePageSections/heroSection.astro";
+
+// Components
+import Card from "../components/ui/card.astro";
+import CardGrid from "../components/ui/cardGrid.astro";
 ---
 
 <Layout>
   <HeroSection />
   <section id="pilars-section">
     <div class="wrapper section-wrapper">
-      <div class="section-title">
-        <h2>Built on three pillars of daily discipline</h2>
-        <p>
-          Transform your entrepeneurial journey with a structured approach to
-          productivity, energy management, and personal growth
-        </p>
-      </div>
+      <SectionTitle />
 
-      <div class="card-grid">
-        <div class="card">
+      <CardGrid>
+        <Card>
           <!-- icon -->
           <div></div>
 
@@ -34,10 +33,9 @@ import HeroSection from "../sections/homePageSections/heroSection.astro";
             <li><span class="check-icon">&check;</span> Daily goal setting</li>
             <li><span class="check-icon">&check;</span> Daily goal setting</li>
           </ul>
-        </div>
-
-
-        <div class="card">
+        </Card>
+        
+        <Card>
           <!-- icon -->
           <div></div>
 
@@ -53,9 +51,9 @@ import HeroSection from "../sections/homePageSections/heroSection.astro";
             <li><span class="check-icon">&check;</span> Daily goal setting</li>
             <li><span class="check-icon">&check;</span> Daily goal setting</li>
           </ul>
-        </div>
+        </Card>
 
-        <div class="card">
+        <Card>
           <!-- icon -->
           <div></div>
 
@@ -71,8 +69,8 @@ import HeroSection from "../sections/homePageSections/heroSection.astro";
             <li><span class="check-icon">&check;</span> Daily goal setting</li>
             <li><span class="check-icon">&check;</span> Daily goal setting</li>
           </ul>
-        </div>
-      </div>
+        </Card>
+      </CardGrid>
     </div>
   </section>
 </Layout>
@@ -84,57 +82,6 @@ import HeroSection from "../sections/homePageSections/heroSection.astro";
     .section-wrapper {
       display: grid;
       gap: var(--space-lg);
-
-      .section-title {
-        text-align: center;
-        margin-inline: auto;
-        max-width: 65ch;
-
-        h2 {
-          margin-block-end: var(--space-sm);
-        }
-      }
-
-
-      .card-grid {
-        display: grid;
-        gap: var(--space-sm);
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-
-        .card {
-          background-color: var(--clr-neutral-50);
-          border-radius: var(--radius-md);
-          box-shadow: var(--shadow-sm);
-          display: grid;
-          gap: var(--space-sm);
-          padding: var(--space-md);
-          transition: var(--transition-medium);
-
-          div {
-            width: 3rem;
-            height: 3rem;
-            background-color: var(--clr-accent-gold);
-            border-radius: var(--radius-sm);
-          }
-
-          .check-icon {
-            color: var(--clr-accent-gold);
-            font-weight: var(--fw-bold);
-          }
-
-          ul {
-            display: grid;
-            gap: var(--space-sm);
-          }
-
-          &:hover,
-          &:focus {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-10px);
-          }
-
-        }
-      }
     }
   }
 </style>
