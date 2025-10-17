@@ -1,87 +1,15 @@
 ---
-import SectionTitle from "../components/section-title.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Sections
 import HeroSection from "../sections/homePageSections/heroSection.astro";
+import ThreePillarsSection from '../sections/homePageSections/threePillarsSection.astro';
 
-// Components
-import Card from "../components/ui/card.astro";
-import CardGrid from "../components/ui/cardGrid.astro";
 ---
 
 <Layout>
   <HeroSection />
-  <section id="pilars-section">
-    <div class="wrapper section-wrapper">
-      <SectionTitle />
-
-      <CardGrid>
-        <Card>
-          <!-- icon -->
-          <div></div>
-
-          <h3>Mission</h3>
-
-          <p>
-            Set clear goals an focus on what matters most. Define your daily
-            mission with precision
-          </p>
-
-          <ul role="list">
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-          </ul>
-        </Card>
-        
-        <Card>
-          <!-- icon -->
-          <div></div>
-
-          <h3>Mission</h3>
-
-          <p>
-            Set clear goals an focus on what matters most. Define your daily
-            mission with precision
-          </p>
-
-          <ul role="list">
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-          </ul>
-        </Card>
-
-        <Card>
-          <!-- icon -->
-          <div></div>
-
-          <h3>Mission</h3>
-
-          <p>
-            Set clear goals an focus on what matters most. Define your daily
-            mission with precision
-          </p>
-
-          <ul role="list">
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-            <li><span class="check-icon">&check;</span> Daily goal setting</li>
-          </ul>
-        </Card>
-      </CardGrid>
-    </div>
-  </section>
+  <ThreePillarsSection />
 </Layout>
 
-<style>
-  #pilars-section {
-    background-color: var(--clr-neutral-100);
 
-    .section-wrapper {
-      display: grid;
-      gap: var(--space-lg);
-    }
-  }
-</style>
