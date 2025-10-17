@@ -7,15 +7,15 @@ const { btnType = "btn", btnStyle = "", btnId = "" } = Astro.props;
 
 <style>
   .btn {
+    border-radius: var(--radius-md);
+    border: solid 2px transparent;
+    box-shadow: var(--shadow-sm);
     cursor: pointer;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
     padding-block: var(--space-sm);
     padding-inline: var(--space-md);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
     transition: var(--transition-fast);
-    border: none;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-sm);
 
     &:hover {
       box-shadow: var(--shadow-md);
@@ -36,5 +36,11 @@ const { btnType = "btn", btnStyle = "", btnId = "" } = Astro.props;
   .primary {
     background-color: var(--btn-primary-bg);
     color: var(--btn-primary-text);
+  }
+
+  .primary-open {
+    background-color: transparent;
+    border-color: var(--btn-primary-bg);
+    color: var(--btn-primary-bg);
   }
 </style>
