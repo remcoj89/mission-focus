@@ -1,10 +1,140 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 // Sections
-import HeroSection from '../sections/heroSection.astro';
+import HeroSection from "../sections/homePageSections/heroSection.astro";
 ---
 
 <Layout>
   <HeroSection />
+  <section id="pilars-section">
+    <div class="wrapper section-wrapper">
+      <div class="section-title">
+        <h2>Built on three pillars of daily discipline</h2>
+        <p>
+          Transform your entrepeneurial journey with a structured approach to
+          productivity, energy management, and personal growth
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <!-- icon -->
+          <div></div>
+
+          <h3>Mission</h3>
+
+          <p>
+            Set clear goals an focus on what matters most. Define your daily
+            mission with precision
+          </p>
+
+          <ul role="list">
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+          </ul>
+        </div>
+
+
+        <div class="card">
+          <!-- icon -->
+          <div></div>
+
+          <h3>Mission</h3>
+
+          <p>
+            Set clear goals an focus on what matters most. Define your daily
+            mission with precision
+          </p>
+
+          <ul role="list">
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <!-- icon -->
+          <div></div>
+
+          <h3>Mission</h3>
+
+          <p>
+            Set clear goals an focus on what matters most. Define your daily
+            mission with precision
+          </p>
+
+          <ul role="list">
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+            <li><span class="check-icon">&check;</span> Daily goal setting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  #pilars-section {
+    background-color: var(--clr-neutral-100);
+
+    .section-wrapper {
+      display: grid;
+      gap: var(--space-lg);
+
+      .section-title {
+        text-align: center;
+        margin-inline: auto;
+        max-width: 65ch;
+
+        h2 {
+          margin-block-end: var(--space-sm);
+        }
+      }
+
+
+      .card-grid {
+        display: grid;
+        gap: var(--space-sm);
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+        .card {
+          background-color: var(--clr-neutral-50);
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-sm);
+          display: grid;
+          gap: var(--space-sm);
+          padding: var(--space-md);
+          transition: var(--transition-medium);
+
+          div {
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--clr-accent-gold);
+            border-radius: var(--radius-sm);
+          }
+
+          .check-icon {
+            color: var(--clr-accent-gold);
+            font-weight: var(--fw-bold);
+          }
+
+          ul {
+            display: grid;
+            gap: var(--space-sm);
+          }
+
+          &:hover,
+          &:focus {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-10px);
+          }
+
+        }
+      }
+    }
+  }
+</style>

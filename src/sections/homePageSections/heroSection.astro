@@ -3,10 +3,10 @@
 import { Image } from "astro:assets";
 
 // Assets
-import heroImage from "../assets/images/placeholder-image.webp";
+import heroImage from "../../assets/images/placeholder-image.webp";
 
 // Components
-import Button from "../components/ui/button.astro";
+import Button from "../../components/ui/button.astro";
 ---
 
 <header class="hero">
@@ -34,8 +34,8 @@ import Button from "../components/ui/button.astro";
 
 <style>
   .hero {
-    background-image: linear-gradient(var(--gradient-hero));
-    color: var(--text-primary);
+    background-image: var(--gradient-hero);
+    color: var(--text-header);
     padding-block: var(--space-xl);
 
     .hero-wrapper {
