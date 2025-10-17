@@ -1,13 +1,10 @@
 ---
-
+const { sectionTitle, sectionSubtitle} = Astro.props
 ---
 
 <div class="section-title">
-  <h2>Built on three pillars of daily discipline</h2>
-  <p>
-    Transform your entrepeneurial journey with a structured approach to
-    productivity, energy management, and personal growth
-  </p>
+  <h2>{sectionTitle}</h2>
+  <p>{sectionSubtitle}</p>
 </div>
 
 <style>

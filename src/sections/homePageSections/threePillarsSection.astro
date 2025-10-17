@@ -3,11 +3,14 @@
 import Card from "../../components/ui/card.astro";
 import CardGrid from "../../components/ui/cardGrid.astro";
 import SectionTitle from "../../components/section-title.astro";
+
+const sectionTitle = "Built on three pillars of daily discipline";
+const sectionSubtitle = " Transform your entrepeneurial journey with a structured approach to productivity, energy management, and personal growth";
 ---
 
 <section id="pilars-section">
   <div class="wrapper section-wrapper">
-    <SectionTitle />
+    <SectionTitle sectionTitle={sectionTitle} sectionSubtitle={sectionSubtitle} />
 
     <CardGrid>
       <Card>

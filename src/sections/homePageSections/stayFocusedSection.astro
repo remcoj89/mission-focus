@@ -1,0 +1,208 @@
+---
+// Astro Components
+import Image from "astro/components/Image.astro";
+
+// Components
+import SectionTitle from "../../components/section-title.astro";
+import FlexWrapper from "../../components/ui/flexWrapper.astro";
+import Button from "../../components/ui/button.astro";
+
+// Copy
+const sectionTitle = "Everything you need to stay focused";
+const sectionSubtitle =
+  "Powerfull features designed specifically for entrepreneurs who demand precision, clarity and results.";
+
+// Assets
+import placeHolderImage from "../../assets/images/placeholder-image.webp";
+---
+
+<section id="stayFocusedSection">
+  <div class="wrapper section-wrapper">
+    <SectionTitle
+      sectionTitle={sectionTitle}
+      sectionSubtitle={sectionSubtitle}
+    />
+
+    <FlexWrapper flexAlign="flexAlignCenter">
+      <div class="section-copy">
+        <h3>Plan your day with purpose.</h3>
+        <p>
+          Prioritize, execute, and track — without distractions. Our intelligent
+          planning system helps you structure your day around your most
+          important objectives.
+        </p>
+
+        <ul role="list">
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+        </ul>
+
+        <Button btnStyle="primary">Try planning Tools</Button>
+      </div>
+      <picture class="image-frame">
+        <Image
+          src={placeHolderImage}
+          alt="Placeholder image"
+          width={500}
+          height={500}
+        />
+      </picture>
+    </FlexWrapper>
+
+    <FlexWrapper flexAlign="flexAlignCenter">
+      <picture class="image-frame">
+        <Image
+          src={placeHolderImage}
+          alt="Placeholder image"
+          width={500}
+          height={500}
+        />
+      </picture>
+      <div class="section-copy">
+        <h3>Plan your day with purpose.</h3>
+        <p>
+          Prioritize, execute, and track — without distractions. Our intelligent
+          planning system helps you structure your day around your most
+          important objectives.
+        </p>
+
+        <ul role="list">
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+        </ul>
+
+        <Button btnStyle="primary">Try planning Tools</Button>
+      </div>
+    </FlexWrapper>
+
+    <FlexWrapper flexAlign="flexAlignCenter">
+      <div class="section-copy">
+        <h3>Plan your day with purpose.</h3>
+        <p>
+          Prioritize, execute, and track — without distractions. Our intelligent
+          planning system helps you structure your day around your most
+          important objectives.
+        </p>
+
+        <ul role="list">
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+        </ul>
+
+        <Button btnStyle="primary">Try planning Tools</Button>
+      </div>
+      <picture class="image-frame">
+        <Image
+          src={placeHolderImage}
+          alt="Placeholder image"
+          width={500}
+          height={500}
+        />
+      </picture>
+    </FlexWrapper>
+  </div>
+</section>
+
+<style>
+  .section-copy {
+    display: grid;
+    gap: var(--space-md);
+    width: 50%;
+
+    ul {
+      display: grid;
+      gap: var(--space-sm);
+
+      li {
+        display: flex;
+        gap: var(--space-sm);
+
+        p {
+          margin-block-start: var(--space-xs);
+        }
+      }
+      .check-icon {
+        align-items: center;
+        background-color: var(--clr-accent-gold);
+        border-radius: 500rem;
+        display: inline-flex;
+        font-size: 0.8rem;
+        font-weight: var(--fw-bold);
+        height: 1.2rem;
+        justify-content: center;
+        width: 1.2rem;
+      }
+    }
+  }
+
+  .image-frame {
+    background-color: var(--clr-neutral-100);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 1.5rem;
+    width: 50%;
+
+    img {
+      border-radius: var(--radius-md);
+      height: 100%;
+      width: 100%;
+    }
+  }
+</style>

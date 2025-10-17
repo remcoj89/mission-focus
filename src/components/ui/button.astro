@@ -13,9 +13,10 @@ const { btnType = "btn", btnStyle = "", btnId = "" } = Astro.props;
     cursor: pointer;
     font-size: var(--fs-sm);
     font-weight: var(--fw-bold);
-    padding-block: var(--space-sm);
+    padding-block: var(--space-xs);
     padding-inline: var(--space-md);
     transition: var(--transition-fast);
+    width: fit-content;
 
     &:hover {
       box-shadow: var(--shadow-md);

@@ -1,0 +1,19 @@
+---
+const {flexAlign = ""} = Astro.props
+---
+
+<div class=`flex-wrapper ${flexAlign}` >
+  <slot />
+</div>
+
+<style>
+  .flex-wrapper {
+    display: flex;
+    gap: var(--space-lg);
+    padding-block: var(--space-lg);
+  }
+
+  .flexAlignCenter {
+    align-items: center;
+  }
+</style>
