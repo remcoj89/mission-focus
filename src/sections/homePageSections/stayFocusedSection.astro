@@ -6,6 +6,7 @@ import Image from "astro/components/Image.astro";
 import SectionTitle from "../../components/section-title.astro";
 import FlexWrapper from "../../components/ui/flexWrapper.astro";
 import Button from "../../components/ui/button.astro";
+import TextContentArea from "../../components/ui/textCotentArea.astro";
 
 // Copy
 const sectionTitle = "Everything you need to stay focused";
@@ -24,7 +25,7 @@ import placeHolderImage from "../../assets/images/placeholder-image.webp";
     />
 
     <FlexWrapper flexAlign="flexAlignCenter">
-      <div class="section-copy">
+      <TextContentArea>
         <h3>Plan your day with purpose.</h3>
         <p>
           Prioritize, execute, and track — without distractions. Our intelligent
@@ -57,7 +58,7 @@ import placeHolderImage from "../../assets/images/placeholder-image.webp";
         </ul>
 
         <Button btnStyle="primary">Try planning Tools</Button>
-      </div>
+      </TextContentArea>
       <picture class="image-frame">
         <Image
           src={placeHolderImage}
@@ -77,7 +78,7 @@ import placeHolderImage from "../../assets/images/placeholder-image.webp";
           height={500}
         />
       </picture>
-      <div class="section-copy">
+      <TextContentArea>
         <h3>Plan your day with purpose.</h3>
         <p>
           Prioritize, execute, and track — without distractions. Our intelligent
@@ -110,11 +111,11 @@ import placeHolderImage from "../../assets/images/placeholder-image.webp";
         </ul>
 
         <Button btnStyle="primary">Try planning Tools</Button>
-      </div>
+      </TextContentArea>
     </FlexWrapper>
 
     <FlexWrapper flexAlign="flexAlignCenter">
-      <div class="section-copy">
+      <TextContentArea>
         <h3>Plan your day with purpose.</h3>
         <p>
           Prioritize, execute, and track — without distractions. Our intelligent
@@ -147,7 +148,7 @@ import placeHolderImage from "../../assets/images/placeholder-image.webp";
         </ul>
 
         <Button btnStyle="primary">Try planning Tools</Button>
-      </div>
+      </TextContentArea>
       <picture class="image-frame">
         <Image
           src={placeHolderImage}
@@ -189,20 +190,6 @@ import placeHolderImage from "../../assets/images/placeholder-image.webp";
         justify-content: center;
         width: 1.2rem;
       }
-    }
-  }
-
-  .image-frame {
-    background-color: var(--clr-neutral-100);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
-    padding: 1.5rem;
-    width: 50%;
-
-    img {
-      border-radius: var(--radius-md);
-      height: 100%;
-      width: 100%;
     }
   }
 </style>

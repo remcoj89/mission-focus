@@ -1,0 +1,54 @@
+---
+// Astro Components
+import Image from "astro/components/Image.astro";
+
+// Components
+import FlexWrapper from "../../components/ui/flexWrapper.astro";
+import Button from "../../components/ui/button.astro";
+
+// Assets
+import placeholderImage from "../../assets/images/placeholder-image.webp";
+---
+
+<section class="dark-bg">
+  <div class="wrapper">
+    <FlexWrapper>
+      <div class="infoBlock">
+        <h2>Meet your AI Reflection Coach.</h2>
+        <p>
+          A smart companion that helps you analyze patterns and stay consistent.
+          Get personalized insights and recommendations based on your unique
+          productivity data.
+        </p>
+
+        <ul role="list">
+
+        </ul>
+
+        <Button>Chat with AI Coach</Button>
+      </div>
+
+      <Image
+        src={placeholderImage}
+        alt="placehoder image"
+        width={500}
+        height={500}
+      />
+    </FlexWrapper>
+  </div>
+</section>
+
+<style>
+  .dark-bg {
+    background-image: var(--gradient-hero);
+    color: var(--text-header);
+
+    .infoBlock {
+      display: grid;
+      gap: var(--space-md);
+      h2 {
+        color: var(--clr-accent-gold);
+      }
+    }
+  }
+</style>

@@ -3,10 +3,13 @@
 import { Image } from "astro:assets";
 
 // Assets
-import heroImage from "../../assets/images/placeholder-image.webp";
+import heroImage from "../../assets/images/home-page/hero-img-mission-focus.webp";
 
 // Components
 import Button from "../../components/ui/button.astro";
+
+// Icons
+import { CupIcon } from "../../assets/svgIcons/icons";
 ---
 
 <header class="hero">
@@ -28,7 +31,10 @@ import Button from "../../components/ui/button.astro";
         </div>
       </div>
     </div>
-    <Image src={heroImage} width={500} height={500} alt="Hero Image" />
+    <picture class="hero-image">
+      <Image src={heroImage} alt="Placeholder image" width={500} height={500} />
+      <div class="iconCup"><CupIcon/></div>
+    </picture>
   </div>
 </header>
 
@@ -37,6 +43,7 @@ import Button from "../../components/ui/button.astro";
     background-image: var(--gradient-hero);
     color: var(--text-header);
     padding-block: var(--space-xl);
+    overflow: hidden;
 
     .hero-wrapper {
       display: flex;
@@ -63,10 +70,35 @@ import Button from "../../components/ui/button.astro";
         }
       }
 
-      img {
-        object-fit: cover;
-        object-position: center;
+      .hero-image {
+        background-color: var(--text-header);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        position: relative;
+
+        img {
+          border-radius: var(--radius-md);
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .iconCup {
+          background-color: var(--clr-accent-gold);
+          border-radius: 500vw;
+          color: var(--bg-header);
+          height: 4rem;
+          padding: 0.5rem;
+          width: 4rem;
+          position: absolute;
+          top: -1.5rem;
+          right: -1.5rem;
+
+          svg {
+           text-align: center
+          }
+        }
       }
+
     }
   }
 </style>

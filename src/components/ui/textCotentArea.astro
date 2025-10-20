@@ -1,0 +1,40 @@
+---
+
+---
+
+<div class="section-copy">
+  <slot />
+</div>
+
+<style>
+  .section-copy {
+    display: grid;
+    gap: var(--space-md);
+    width: 50%;
+
+    ul {
+      display: grid;
+      gap: var(--space-sm);
+
+      li {
+        display: flex;
+        gap: var(--space-sm);
+
+        p {
+          margin-block-start: var(--space-xs);
+        }
+      }
+      .check-icon {
+        align-items: center;
+        background-color: var(--clr-accent-gold);
+        border-radius: 500rem;
+        display: inline-flex;
+        font-size: 0.8rem;
+        font-weight: var(--fw-bold);
+        height: 1.2rem;
+        justify-content: center;
+        width: 1.2rem;
+      }
+    }
+  }
+</style>
