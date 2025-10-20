@@ -1,0 +1,18 @@
+---
+
+---
+
+<li><slot /></li>
+
+<style>
+  li {
+    margin-left: 1.5rem;
+    padding-inline-start: 0.5rem;
+
+    &::marker {
+      color: var(--clr-accent-gold);
+      content: "✓";
+      font-weight: var(--fw-bold);
+    }
+  }
+</style>

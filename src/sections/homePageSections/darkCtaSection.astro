@@ -22,10 +22,30 @@ import placeholderImage from "../../assets/images/placeholder-image.webp";
         </p>
 
         <ul role="list">
-
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">&check;</span>
+            <div>
+              <h4>Smart Task Prioritization</h4>
+              <p>AI-Powered ranking based on impact and urgency</p>
+            </div>
+          </li>
         </ul>
 
-        <Button>Chat with AI Coach</Button>
+        <Button btnStyle="primary">Chat with AI Coach</Button>
       </div>
 
       <Image
@@ -44,10 +64,39 @@ import placeholderImage from "../../assets/images/placeholder-image.webp";
     color: var(--text-header);
 
     .infoBlock {
-      display: grid;
-      gap: var(--space-md);
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      
       h2 {
         color: var(--clr-accent-gold);
+      }
+
+      ul {
+        display: grid;
+        gap: var(--space-sm);
+        padding-block: var(--space-sm);
+
+        li {
+          display: flex;
+          gap: var(--space-sm);
+
+          p {
+            margin-block-start: var(--space-xs);
+          }
+        }
+        .check-icon {
+          align-items: center;
+          background-color: var(--clr-accent-gold);
+          border-radius: 500rem;
+          display: inline-flex;
+          font-size: 0.8rem;
+          font-weight: var(--fw-bold);
+          height: 1.2rem;
+          justify-content: center;
+          width: 1.2rem;
+        }
       }
     }
   }
